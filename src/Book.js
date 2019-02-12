@@ -5,20 +5,16 @@ import Thumbnail from './Thumbnail'
 const Book = (props) => {
 
   const handleChange = (selectedOption) => {
-    this.props.callbackParent(this.props.book, selectedOption.target.value);
+    props.callbackParent(book, selectedOption.target.value);
   }
 
-  static propTypes = {
-    book: PropTypes.object.isRequired,
-  }
-
-  const { book } = props
+  const { book, shelf } = props
   return (
     <div className="book">
       <div className="book-top">
         <Thumbnail book={book} />
         <div className="book-shelf-changer">
-          <select onChange={this.handleChange} value={this.props.shelf} >
+          <select onChange={handleChange} value={shelf} >
             <option value="move" disabled>Move to...</option>
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>
