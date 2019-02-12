@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 class BookShelf extends Component {
 
   static propTypes = {
-    books: PropTypes.arrayOf(PropTypes.oject).isRequired,
+    books: PropTypes.arrayOf(PropTypes.object).isRequired,
     onBookChanged: PropTypes.func
   }
 
